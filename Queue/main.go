@@ -15,9 +15,3 @@ func (this *RecentCounter) Ping(t int) int {
 	}
 	return len(this.times)
 }
-
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * obj := Constructor();
- * param_1 := obj.Ping(t);
- */

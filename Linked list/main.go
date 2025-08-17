@@ -10,17 +10,17 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// func deleteMiddle(head *ListNode) *ListNode {
-// 	dummy := &ListNode{Next: head}
-// 	fast := head
-// 	prev := dummy
-// 	for fast != nil && fast.Next != nil {
-// 		fast = fast.Next.Next
-// 		prev = prev.Next
-// 	}
-// 	prev.Next = prev.Next.Next
-// 	return dummy.Next
-// }
+func deleteMiddle(head *ListNode) *ListNode {
+	dummy := &ListNode{Next: head}
+	fast := head
+	prev := dummy
+	for fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		prev = prev.Next
+	}
+	prev.Next = prev.Next.Next
+	return dummy.Next
+}
 
 func reverseList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
