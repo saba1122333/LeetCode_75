@@ -82,19 +82,20 @@
 # - (Row 2, Column 1): [2,7,7]
 
 
-class Solution:
-    def equalPairs(self, grid: list[list[int]]) -> int:
-        dict = {}
-        ans = 0
-        for row in grid:
-            key = hash(tuple(row))
-            if key in dict:
-                dict[key] += 1
-            else:
-                dict[key] = 1
+# class Solution:
+#     def equalPairs(self, grid: list[list[int]]) -> int:
+#         dict = {}
+#         ans = 0
+#         for row in grid:
+#             key = hash(tuple(row))
+#             if key in dict:
+#                 dict[key] += 1
+#             else:
+#                 dict[key] = 1
 
-        for col in zip(*grid):
-            key = hash(tuple(col))
-            if key in dict:
-                ans += dict[key]
-        return ans
+#         for col in zip(*grid):
+#             key = hash(tuple(col))
+#             if key in dict:
+#                 ans += dict[key]
+#         return ans
+
